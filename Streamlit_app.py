@@ -7,12 +7,12 @@ from snowflake.snowpark.functions import col
 
 
 cnx = snowflake.connector.connect(
-    user=st.secrets["snowflake"]["user"],
-    password=st.secrets["snowflake"]["password"],
-    account=st.secrets["snowflake"]["account"],
-    database=st.secrets["snowflake"]["database"],
-    schema=st.secrets["snowflake"]["schema"],
-    warehouse=st.secrets["snowflake"]["warehouse"]
+    user=st.secrets["snowflake"]["PRANAVI"],
+    password=st.secrets["snowflake"]["XXXXXXXXXXXXXXXXXX"],
+    account=st.secrets["snowflake"]["YWJUAQJ-ZMB87297"],
+    database=st.secrets["snowflake"]["SMOOTHIES"],
+    schema=st.secrets["snowflake"]["PUBLIC"],
+    warehouse=st.secrets["snowflake"]["COMPUTE_WH"]
 )
 
 
