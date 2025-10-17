@@ -6,20 +6,6 @@ import snowflake.connector
 from snowflake.snowpark.functions import col
 
 
-cnx = snowflake.connector.connect(
-    user=st.secrets["snowflake"]["user"],        # correct key
-    password=st.secrets["snowflake"]["password"],
-    account=st.secrets["snowflake"]["account"],
-    database=st.secrets["snowflake"]["database"],
-    schema=st.secrets["snowflake"]["schema"],
-    warehouse=st.secrets["snowflake"]["warehouse"]
-)
-
-
-cursor = cnx.cursor()
-cursor.execute("SELECT CURRENT_VERSION()")
-st.write(cursor.fetchone())
-
 cnx=st.connection("snowflake")
 session=cnx.session()
 
