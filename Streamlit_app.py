@@ -5,6 +5,21 @@ import snowflake.connector
 
 from snowflake.snowpark.functions import col
 
+
+cnx = snowflake.connector.connect(
+    user=st.secrets["snowflake"]["pranavi"],
+    password=st.secrets["snowflake"]["Chinna1818$12345678"],
+    account=st.secrets["snowflake"]["YWJUAQJ-ZMB87297"],
+    database=st.secrets["snowflake"]["SMOOTHIES"],
+    schema=st.secrets["snowflake"]["PUBLIC"],
+    warehouse=st.secrets["snowflake"]["COMPUTE_WH"]
+)
+
+
+cursor = cnx.cursor()
+cursor.execute("SELECT CURRENT_VERSION()")
+st.write(cursor.fetchone())
+
 cnx=st.connection("snowflake")
 session=cnx.session()
 
