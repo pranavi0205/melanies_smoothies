@@ -31,8 +31,8 @@ ingredients_list=st.multiselect(
 
 #st.dataframe(data=my_dataframe,use_container_width=True)
 #st.stop()
-#pd_df=my_dataframe.to_pandas()
-#st.dataframe(pd_df)
+pd_df=my_dataframe.to_pandas()
+st.dataframe(pd_df)
 #st.stop()
 if st.button('Submit'):
     if ingredients_list and name_on_order:
